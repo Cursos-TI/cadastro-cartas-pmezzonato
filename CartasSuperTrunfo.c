@@ -15,7 +15,7 @@ int main() {
   // Área para entrada de dados
 
   printf("SUPER TRUNFO - CADASTRO DE CARTAS\n\n");
-   printf("Antes de comecar, tenha em mente as informacoes que você deve ter de cada cidade a ser cadastrada:\n\n");
+   printf("Antes de comecar, pesquise as seguintes informacões de cada cidade a ser cadastrada:\n\n");
    printf("Estado;\nPopulacão (em milhares de habitantes);\nÁrea (em km²);\nPIB (em bilhões de reais);\nNúmero de pontos turísticos.\n\n");
    printf("[APERTE ENTER PARA COMECAR]: ", enter);
    scanf("%c", &enter);
@@ -36,7 +36,7 @@ int main() {
       scanf(" %c", &estado1);
 
 
-      // Escolha da primeira cidade
+     // Escolha da primeira cidade
 
       printf("Agora escolha o nome da cidade (apenas uma palavra - sem espacos): ");
       scanf(" %s", cidade1);
@@ -79,27 +79,27 @@ int main() {
       printf("Agora escolha o estado da segunda carta: ");
       scanf(" %c", &estado2);
 
-      // Escolha da primeira cidade
+      // Escolha da segunda cidade
 
       printf("Agora escolha o nome da cidade (apenas uma palavra - sem espacos): ");
       scanf(" %s", cidade2);
 
-      // Populacao - Cidade 1
+      // Populacao - Cidade 2
 
       printf("Indique o número de habitantes desta cidade (em milhares de hab.): ");
       scanf(" %d", &pop2);
 
-      // Área - Cidade 1
+      // Área - Cidade 2
 
       printf("Indique a área desta cidade (em km²): ");
       scanf(" %f", &area2);
 
-      // PIB - Cidade 1
+      // PIB - Cidade 2
 
       printf("Qual é o PIB desta cidade? (em bilhões de reais): ");
       scanf(" %f", &pib2);
 
-      // Pontos turísticos - Cidade 1
+      // Pontos turísticos - Cidade 2
 
       printf("Quantos pontos turísticos tem esta cidade?: ");
       scanf(" %d", &pontos2);
@@ -118,7 +118,7 @@ int main() {
 
         printf("Carta 2:\n\n");
         printf("Estado: %c\n", estado2);
-        printf("Código da carta: %c01\n", estado2);
+        printf("Código da carta: %c02\n", estado2);
         printf("Nome da cidade: %s\n", cidade2);
         printf("Populacão: %d mil pessoas\n", pop2);
         printf("Produto Interno Bruto (PIB): %.2f bilhões de reais\n", pib2);
