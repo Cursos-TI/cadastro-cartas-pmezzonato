@@ -7,17 +7,17 @@
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
 
-  int pontos1, pontos2, pop1, pop2;
-  float area1, area2, pib1, pib2;
+  int pontos1, pontos2;
+  float area1, area2, pib1, pib2, pop1, pop2, densidade1, densidade2, capita1, capita2;
   char enter, estado1, estado2; 
   char cidade1[20], cidade2[20];
 
   // Área para entrada de dados
 
   printf("SUPER TRUNFO - CADASTRO DE CARTAS\n\n");
-   printf("Antes de comecar, pesquise as seguintes informacões de cada cidade a ser cadastrada:\n\n");
-   printf("Estado;\nPopulacão (em milhares de habitantes);\nÁrea (em km²);\nPIB (em bilhões de reais);\nNúmero de pontos turísticos.\n\n");
-   printf("[APERTE ENTER PARA COMECAR]: ", enter);
+   printf("Antes de começar, pesquise as seguintes informações de cada cidade a ser cadastrada:\n\n");
+   printf("Estado;\nPopulação (em milhares de habitantes);\nÁrea (em km²);\nPIB (em bilhões de reais);\nNúmero de pontos turísticos.\n\n");
+   printf("[APERTE ENTER PARA COMEÇAR]: ", enter);
    scanf("%c", &enter);
    printf("\n----------------------------\n\n");
     printf("Carta 1:\n\n");
@@ -38,13 +38,13 @@ int main() {
 
      // Escolha da primeira cidade
 
-      printf("Agora escolha o nome da cidade (apenas uma palavra - sem espacos): ");
+      printf("Agora escolha o nome da cidade (apenas uma palavra - sem espaços): ");
       scanf(" %s", cidade1);
 
         // Populacao - Cidade 1
 
       printf("Indique o número de habitantes desta cidade (em milhares de hab.): ");
-      scanf(" %d", &pop1);
+      scanf(" %f", &pop1);
 
       // Área - Cidade 1
 
@@ -81,13 +81,13 @@ int main() {
 
       // Escolha da segunda cidade
 
-      printf("Agora escolha o nome da cidade (apenas uma palavra - sem espacos): ");
+      printf("Agora escolha o nome da cidade (apenas uma palavra - sem espaços): ");
       scanf(" %s", cidade2);
 
       // Populacao - Cidade 2
 
       printf("Indique o número de habitantes desta cidade (em milhares de hab.): ");
-      scanf(" %d", &pop2);
+      scanf(" %f", &pop2);
 
       // Área - Cidade 2
 
@@ -105,6 +105,14 @@ int main() {
       scanf(" %d", &pontos2);
       printf("\n----------------------------\n\n");
 
+      // Definindo o cálculo para densidade demográfica e pib per capita
+
+        densidade1 = (pop1*1000) / area1;
+        capita1 = (pib1*1000000) / pop1;
+
+        densidade2 = (pop2*1000) / area2;
+        capita2 = (pib2*1000000) / pop2;
+
       // Área para exibição dos dados da cidade
 
         printf("CARTAS CADASTRADAS\n\n");
@@ -112,17 +120,24 @@ int main() {
         printf("Estado: %c\n", estado1);
         printf("Código da carta: %c01\n", estado1);
         printf("Nome da cidade: %s\n", cidade1);
-        printf("Populacão: %d mil pessoas\n", pop1);
+        printf("População: %.0f000\n", pop1);
+        printf("Área: %.0f km²\n", area1);
         printf("Produto Interno Bruto (PIB): %.2f bilhões de reais\n", pib1);
-        printf("Número de pontos turísticos: %d\n\n", pontos1);
+        printf("Número de pontos turísticos: %d\n", pontos1);
+        printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+        printf("PIB per capita: %.2f reais\n\n", capita1);
+
 
         printf("Carta 2:\n\n");
         printf("Estado: %c\n", estado2);
         printf("Código da carta: %c02\n", estado2);
         printf("Nome da cidade: %s\n", cidade2);
-        printf("Populacão: %d mil pessoas\n", pop2);
+        printf("População: %.0f000 pessoas\n", pop2);
+        printf("Área: %.0f km²\n", area2);
         printf("Produto Interno Bruto (PIB): %.2f bilhões de reais\n", pib2);
-        printf("Número de pontos turísticos: %d\n\n", pontos2);
+        printf("Número de pontos turísticos: %d\n", pontos2);
+        printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+        printf("PIB per capita: %.2f reais\n\n", capita1);
 
         return 0;
 } 
