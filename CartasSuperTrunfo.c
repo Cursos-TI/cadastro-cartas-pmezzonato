@@ -8,7 +8,7 @@ int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
 
   int pontos1, pontos2;
-  float area1, area2, pib1, pib2, pop1, pop2, densidade1, densidade2, capita1, capita2;
+  float area1, area2, pib1, pib2, pop1, pop2, densidade1, densidade2, capita1, capita2, super1, super2;
   char enter, estado1, estado2; 
   char cidade1[20], cidade2[20];
 
@@ -113,6 +113,11 @@ int main() {
         densidade2 = (pop2*1000) / area2;
         capita2 = (pib2*1000000) / pop2;
 
+      // Definindo o cálculo para  Super Poder
+
+        super1 = pop1 + area1 + pib1 + pontos1 + capita1 - densidade1;
+        super2 = pop2 + area2 + pib2 + pontos2 + capita2 - densidade2;
+
       // Área para exibição dos dados da cidade
 
         printf("CARTAS CADASTRADAS\n\n");
@@ -125,8 +130,8 @@ int main() {
         printf("Produto Interno Bruto (PIB): %.2f bilhões de reais\n", pib1);
         printf("Número de pontos turísticos: %d\n", pontos1);
         printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
-        printf("PIB per capita: %.2f reais\n\n", capita1);
-
+        printf("PIB per capita: %.2f reais\n", capita1);
+        printf("Super Poder: %.2f\n\n", super1);
 
         printf("Carta 2:\n\n");
         printf("Estado: %c\n", estado2);
@@ -136,8 +141,9 @@ int main() {
         printf("Área: %.0f km²\n", area2);
         printf("Produto Interno Bruto (PIB): %.2f bilhões de reais\n", pib2);
         printf("Número de pontos turísticos: %d\n", pontos2);
-        printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
-        printf("PIB per capita: %.2f reais\n\n", capita1);
+        printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+        printf("PIB per capita: %.2f reais\n", capita2);
+        printf("Super Poder: %.2f\n\n", super2);
 
         return 0;
 } 
