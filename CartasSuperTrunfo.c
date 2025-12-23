@@ -145,5 +145,19 @@ int main() {
         printf("PIB per capita: %.2f reais\n", capita2);
         printf("Super Poder: %.2f\n\n", super2);
 
+
+        // Área para exibição do comparativo
+
+        printf("COMPARATIVO:\n\n");
+        printf("1: Carta 1 venceu\n");
+        printf("0: Carta 2 venceu\n\n");
+        printf("População: %d\n", pop1 > pop2);
+        printf("Área: %d\n", area1 > area2);
+        printf("Produto Interno Bruto (PIB): %d\n", pib1 > pib2);
+        printf("Número de pontos turísticos: %d\n", pontos1 > pontos2);
+        printf("Densidade Populacional: %d\n", densidade1 < densidade2);
+        printf("PIB per capita: %d\n", capita1 > capita2);
+        printf("Super Poder: %d\n\n", super1 > super2);
+
         return 0;
 } 
