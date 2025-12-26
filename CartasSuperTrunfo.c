@@ -17,7 +17,7 @@ int main() {
   printf("SUPER TRUNFO - CADASTRO DE CARTAS\n\n");
    printf("Antes de começar, pesquise as seguintes informações de cada cidade a ser cadastrada:\n\n");
    printf("Estado;\nPopulação (em milhares de habitantes);\nÁrea (em km²);\nPIB (em bilhões de reais);\nNúmero de pontos turísticos.\n\n");
-   printf("[APERTE ENTER PARA COMEÇAR]: ", enter);
+   printf("[APERTE ENTER PARA COMEÇAR]: ");
    scanf("%c", &enter);
    printf("\n----------------------------\n\n");
     printf("Carta 1:\n\n");
@@ -227,6 +227,8 @@ int main() {
 
       }
 
+      break;
+
         case 2:
 
         if (area1 == area2){
@@ -320,6 +322,8 @@ int main() {
         printf("Como consta acima, a Carta 1 tem área de %.0f km² e a Carta 2 tem área de %.0f km².", area1, area2);
 
       }
+
+      break;
 
       case 3:
 
@@ -416,6 +420,8 @@ int main() {
 
       }
 
+      break;
+
       case 4:
 
         if (pontos1 == pontos2){
@@ -509,6 +515,8 @@ int main() {
         printf("Como consta acima, a Carta 1 tem %d pontos turísticos e a Carta 2 tem %d pontos turísticos.", pontos1, pontos2);
 
       }
+
+      break;
 
       case 5:
 
@@ -605,6 +613,8 @@ int main() {
 
       }
 
+      break;
+
       case 6:
 
         if (capita1 == capita2){
@@ -699,6 +709,8 @@ int main() {
         printf("Como consta acima, a Carta 1 tem PIB per capita de %.2f reais e a Carta 2 tem PIB per capita de %.2f reais.", capita1, capita2);
 
       }
+
+      break;
 
       case 7:
 
@@ -795,5 +807,10 @@ int main() {
 
       }
 
-      return 0;
-    } 
+      break;
+      
+      default:
+        printf("Atributo inválido. Por favor, escolha um número entre 1 e 7.\n");
+       }
+      
+}
